@@ -1,0 +1,131 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.footer {
+  width: 100%;
+  height: 240px;
+  margin-top: 250px;
+
+  background-color: #141414;
+
+  &__container {
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+
+    height: inherit;
+    padding: 0;
+
+    @extend %container;
+  }
+  &__subscribe {
+    position: absolute;
+    bottom: 70px;
+
+    width: 90%;
+    height: 205px;
+    margin-left: 5%;
+
+    background-color: #99823d;
+  }
+  &__under-sub {
+    width: 90%;
+    height: 70px;
+    margin-left: 5%;
+  }
+}
+
+.under-sub {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include sm {
+    flex-direction: column;
+  }
+
+  &__list {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    gap: 30px;
+    @include sm {
+      margin-top: 5px;
+    }
+  }
+  &__link {
+    padding: 6px;
+
+    text-decoration: none;
+    letter-spacing: 0.25em;
+
+    color: #ffffff;
+
+    font-size: 0.68rem;
+    line-height: 3.09em;
+  }
+  &__copy {
+    color: #ffffff;
+
+    @include sm {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.subscribe {
+  display: flex;
+  align-items: center;
+
+  padding: 70px;
+
+  gap: 15px;
+  @include lg {
+    padding: 40px;
+  }
+  @include md {
+    padding: 10px;
+  }
+  @include sm {
+    flex-direction: column;
+  }
+
+  &__input {
+    width: 100%;
+    height: 70px;
+    padding-left: 50px;
+
+    @include md {
+      padding-left: 20px;
+    }
+    @include sm {
+      height: 60px;
+      margin-top: 15px;
+    }
+  }
+  &__button {
+    padding: 18px 45px;
+
+    text-decoration: none;
+    letter-spacing: 2.7625px;
+
+    color: #ffffff;
+    background-color: #141414;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 34px;
+
+    @include md {
+      padding: 18px 30px;
+    }
+    @include sm {
+      padding: 10px 30px;
+    }
+  }
+}

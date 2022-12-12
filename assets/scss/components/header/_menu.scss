@@ -1,0 +1,184 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.menu {
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+
+  &__btn {
+    position: relative;
+
+    width: 30px;
+    height: 22.5px;
+    margin: $gap 0;
+
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
+    @media (min-width: 1050px) {
+      display: none;
+    }
+
+    &-row {
+      position: absolute;
+      left: 0;
+
+      display: block;
+
+      width: 100%;
+      height: 3px;
+
+      transition: 0.25s ease-in-out;
+
+      opacity: 1;
+      border-radius: 3px;
+      background: $color-light;
+
+      &:nth-child(1) {
+        top: 0;
+
+        transform-origin: left center;
+      }
+      &:nth-child(2) {
+        top: 9px;
+
+        transform-origin: left center;
+      }
+      &:nth-child(3) {
+        top: 18px;
+
+        transform-origin: left center;
+      }
+    }
+
+    &--active span {
+      &:nth-child(1) {
+        top: -3.5px;
+        left: 4px;
+
+        transform: rotate(45deg);
+      }
+    }
+
+    &--active span {
+      &:nth-child(2) {
+        width: 0;
+
+        opacity: 0;
+      }
+    }
+
+    &--active span {
+      &:nth-child(3) {
+        top: 17.5px;
+        left: 4px;
+
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+
+    padding-left: 0;
+
+    @extend %container;
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 68px;
+
+    @include sm {
+      justify-content: flex-end;
+    }
+  }
+  &__logo-img {
+    width: 190px;
+    height: 49px;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 470px;
+    height: 136px;
+
+    background-color: #99823d;
+
+    @include sm {
+      width: 190px;
+      height: 68px;
+      margin-left: 10px;
+
+      background-color: #141414;
+    }
+  }
+  &__list {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    gap: 30px;
+
+    @media (max-width: 1050px) {
+      position: absolute;
+      top: 50px;
+      right: 15px;
+
+      display: none;
+    }
+  }
+  &__item {
+    text-align: end;
+
+    @media (max-width: 1100px) {
+      background-color: rgba(#141414, 0.5);
+    }
+  }
+  &__link {
+    padding: 6px;
+
+    text-decoration: none;
+    letter-spacing: 0.25em;
+
+    color: #ffffff;
+
+    font-size: 0.68rem;
+    line-height: 3.09em;
+  }
+  &__architecture {
+    display: flex;
+
+    margin-left: 35px;
+
+    color: #ffffff;
+
+    gap: 5px;
+    @include sm {
+      display: none;
+    }
+  }
+  &__text-arc {
+    margin-top: 2px;
+
+    color: rgba(#ffffff, 0.75);
+
+    font-size: 0.5625rem;
+    line-height: 1.7em;
+  }
+  &__text-mw {
+    font-size: 0.625rem;
+    line-height: 1.7em;
+  }
+}

@@ -1,0 +1,41 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.soc-net {
+  display: flex;
+  align-items: center;
+
+  padding-left: 10px;
+
+  @include sm {
+    justify-content: center;
+
+    padding-left: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    gap: 30px;
+    @include sm {
+      gap: 10px;
+    }
+  }
+  &__link {
+    padding: 6px;
+
+    text-decoration: none;
+    letter-spacing: 0.25em;
+
+    color: #000000;
+
+    font-size: 0.68rem;
+    line-height: 3.09em;
+  }
+}

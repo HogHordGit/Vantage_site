@@ -5,12 +5,12 @@
     padding-top: 135px;
 
     &__container {
-
+        
         @extend %container;
     }
     &__content {
-        max-width: 820px;
         padding: 0 68px;
+        flex: 1 1 70%;
     }
     &__category {
         font-style: normal;
@@ -50,7 +50,7 @@
 }
 
 .news {
-    max-width: 424px;
+    flex: 1 1 30%;
 
     &__category {
         font-weight: 400;
@@ -87,18 +87,19 @@
     display: flex;
     max-width: 100%;
     height: inherit;
-    justify-content: space-around;
+
+    flex-wrap: wrap;
 
     &__holder {
         display: flex;
         height: inherit;
 
+        justify-content: center;
         align-items: center;
     }
     &__block {
         width: 9px;
         height: 9px;
-        align-items: center;
 
         background-color: #99823D;
     }

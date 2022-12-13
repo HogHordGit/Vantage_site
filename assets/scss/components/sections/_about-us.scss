@@ -1,0 +1,127 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.about-us {
+    padding-top: 135px;
+
+    &__container {
+
+        @extend %container;
+    }
+    &__content {
+        max-width: 820px;
+        padding: 0 68px;
+    }
+    &__category {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.6875rem;
+        line-height: 1.54em;
+        letter-spacing: 0.15em;
+        color: #99823D;
+    }
+    &__title {
+        font-family: 'Teko';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.94rem;
+        line-height: 1em;
+
+        text-transform: capitalize;
+
+        color: #141414;
+        margin-bottom: 28px;
+    }
+    &__text > *:not(:last-child) {
+        margin-bottom: 16px;
+    }
+    &__par {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.944rem;
+        line-height: 1.444em;
+
+        color: #141414;
+    }
+    &__body {
+        margin-bottom: 65px;
+        display: flex;
+    }
+}
+
+.news {
+    max-width: 424px;
+
+    &__category {
+        font-weight: 400;
+        font-size: 0.611rem;
+        line-height: 1.5454em;
+
+        letter-spacing: 0.2509em;
+        text-transform: uppercase;
+
+        color: #99823D;
+        margin-bottom: 11px;
+    }
+    &__text {
+        font-family: 'Teko';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.444rem;
+        line-height: 1em;
+
+        text-transform: capitalize;
+
+        color: #141414;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        height: 160px;
+        justify-content: center;
+        padding: 0 68px 0 34px;
+    }
+}
+
+.statistic {
+    display: flex;
+    max-width: 100%;
+    height: inherit;
+    justify-content: space-around;
+
+    &__holder {
+        display: flex;
+        height: inherit;
+
+        align-items: center;
+    }
+    &__block {
+        width: 9px;
+        height: 9px;
+        align-items: center;
+
+        background-color: #99823D;
+    }
+    &__number {
+        font-family: 'Teko';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 59px;
+        line-height: 59px;
+
+        text-align: center;
+
+        color: #141414;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+
+        text-align: center;
+        letter-spacing: 2.975px;
+        text-transform: uppercase;
+
+        color: #99823D;
+    }
+}

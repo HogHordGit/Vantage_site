@@ -39,6 +39,18 @@
 .-black {
   background-color: #000000;
 }
-.-pos {
-  flex: 1 1 11.11%;
+.-dis {
+  @include lg {
+    display: none;
+  }
+}
+.-pos-left {
+  @include lg {
+    align-items: flex-end;
+  }
+}
+.-pos-right {
+  @include lg {
+    align-items: flex-start;
+  }
 }

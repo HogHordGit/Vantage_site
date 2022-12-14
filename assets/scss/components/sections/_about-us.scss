@@ -4,8 +4,8 @@
 .about-us {
     padding-top: 135px;
 
-    @include lg {padding-top: 100px;}
-    @include md {padding-top: 65px;}
+    @include lg {padding-top: 80px;}
+    @include md {padding-top: 50px;}
     @include sm {padding-top: 30px;}
 
     &__container {
@@ -61,6 +61,7 @@
         display: flex;
 
         @include md {flex-direction: column;}
+        @include lg-md {margin-bottom: 30px;}
     }
 }
 
@@ -101,6 +102,8 @@
 
         color: #99823D;
         margin-bottom: 11px;
+
+        @include md {text-align: center;}
     }
     &__text {
         font-family: 'Teko';
@@ -112,6 +115,10 @@
         text-transform: capitalize;
 
         color: #141414;
+
+        @include sm {
+            text-align: center;
+        }
     }
     &__item {
         display: flex;
@@ -128,15 +135,23 @@
 
 .statistic {
     display: grid;
-    max-width: 100%;
-    height: inherit;
 
-    &__holder {
+    @include lg-min {grid-template-areas: "a1 a1 a2 a3 a4 a5 a6 a7 a8 a9";}
+
+    @include lg {
+        gap: 20px;
+        grid-template-areas: "a1 a2 a3"
+                             "a5 a4 a7"
+                             "a9 a9 a9";
+        
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__item {
         display: flex;
-        height: inherit;
-
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
     &__block {
         width: 9px;
@@ -154,6 +169,8 @@
         text-align: center;
 
         color: #141414;
+
+        @include sm {font-size: 50px;}
     }
     &__text {
         font-weight: 400;
@@ -167,3 +184,9 @@
         color: #99823D;
     }
 }
+
+@for $i from 1 through 9 {
+    .statistic__item:nth-of-type(#{$i}) {
+      grid-area: a#{$i};
+    }
+  }

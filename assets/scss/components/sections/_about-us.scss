@@ -4,6 +4,10 @@
 .about-us {
     padding-top: 135px;
 
+    @include lg {padding-top: 100px;}
+    @include md {padding-top: 65px;}
+    @include sm {padding-top: 30px;}
+
     &__container {
         
         @extend %container;
@@ -11,6 +15,9 @@
     &__content {
         padding: 0 68px;
         flex: 1 1 70%;
+
+        @include lg {padding: 30px;}
+        @include sm {padding: 0;}
     }
     &__category {
         font-style: normal;
@@ -19,18 +26,23 @@
         line-height: 1.54em;
         letter-spacing: 0.15em;
         color: #99823D;
+
+        @include md {text-align: center;}
     }
     &__title {
         font-family: 'Teko';
         font-style: normal;
         font-weight: 400;
-        font-size: 2.94rem;
         line-height: 1em;
+        letter-spacing: 0.05em;
 
         text-transform: capitalize;
 
         color: #141414;
         margin-bottom: 28px;
+
+        @include adaptive_font(53, 33);
+        @include md {text-align: center;}
     }
     &__text > *:not(:last-child) {
         margin-bottom: 16px;
@@ -38,19 +50,46 @@
     &__par {
         font-style: normal;
         font-weight: 400;
-        font-size: 0.944rem;
         line-height: 1.444em;
+
+        @include adaptive_font(17, 16);
 
         color: #141414;
     }
     &__body {
         margin-bottom: 65px;
         display: flex;
+
+        @include md {flex-direction: column;}
     }
 }
 
 .news {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-around;
+
     flex: 1 1 30%;
+
+    @include md {
+        flex-direction: row;
+        gap: 10px;
+        align-items: baseline;
+    }
+
+    @include sm {
+        & > *:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    @include sm {
+        margin: 40px 0 0 0;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
 
     &__category {
         font-weight: 400;
@@ -77,18 +116,20 @@
     &__item {
         display: flex;
         flex-direction: column;
-        height: 160px;
         justify-content: center;
+
         padding: 0 68px 0 34px;
+        height: 50px;
+
+        @include lg {padding-left: 0;}
+        @include md {padding-right: 0;}
     }
 }
 
 .statistic {
-    display: flex;
+    display: grid;
     max-width: 100%;
     height: inherit;
-
-    flex-wrap: wrap;
 
     &__holder {
         display: flex;

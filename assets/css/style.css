@@ -167,6 +167,7 @@ template {
 }
 
 .footer__container,
+.contacts__container,
 .services__container,
 .projects__container,
 .about-us__container,
@@ -1051,10 +1052,105 @@ body {
   grid-area: a6;
 }
 
+.contacts {
+  margin-top: 50px;
+  padding: 30px 0;
+  padding-bottom: 200px;
+
+  background-color: #f4f4f4;
+}
+.contacts__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 50%;
+      flex: 1 1 50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  padding-left: 10%;
+}
+.contact-block > *:not(:last-child) {
+  margin-bottom: 25px;
+}
+.contact-block__holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contact-block__title {
+  width: 125px;
+}
+.contact-block__text {
+  margin-left: 20px;
+}
+.contact-block__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  margin-top: 15px;
+
+  font-size: 35px;
+
+  gap: 20px;
+}
+
+.form {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 50%;
+      flex: 1 1 50%;
+}
+.form__title {
+  font-size: 20px;
+}
+.form__label {
+  display: block;
+
+  font-size: 19px;
+  font-weight: 400;
+}
+.form__input {
+  width: 100%;
+  height: 42px;
+  padding: 0 0 0 20px;
+
+  border-radius: 7px;
+}
+.form__textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 0 0 0 10px;
+
+  resize: vertical;
+
+  border-radius: 7px;
+}
+.form__block {
+  max-width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.form__block > *:not(:last-child) {
+  margin-bottom: 15px;
+}
+
 .footer {
   width: 100%;
   height: 240px;
-  margin-top: 250px;
 
   background-color: #141414;
 }
@@ -1304,7 +1400,7 @@ body {
 
 @media (min-width: 992px) {
   .statistic {
-    grid-template-areas: "a1 a1 a2 a3 a4 a5 a6 a7 a8 a9";
+    grid-template-areas: "a1 a2 a3 a4 a5 a6 a7 a8 a9";
   }
   .services__content {
     grid-template-areas: "a1 a2 a3" "a4 a5 a6";

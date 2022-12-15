@@ -45,6 +45,10 @@
     height: 100%;
 
     object-fit: fill;
+
+    @include lg {
+      object-fit: cover;
+    }
   }
   &__slide {
     position: absolute;

@@ -1352,6 +1352,10 @@ body {
     position:         sticky;
     right: 0;
   }
+  .slides-body__img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .about-us {
     padding-top: 80px;
   }

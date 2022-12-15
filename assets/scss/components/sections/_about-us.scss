@@ -55,6 +55,10 @@
         @include adaptive_font(17, 16);
 
         color: #141414;
+
+        @include md {
+            text-align: center;
+        }
     }
     &__body {
         margin-bottom: 65px;

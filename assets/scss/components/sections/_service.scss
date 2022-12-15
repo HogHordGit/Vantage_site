@@ -57,6 +57,22 @@
             grid-template-columns: 1fr;
         }
     }
+    &__button {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 50px;
+    }
+    &__link {
+        background-color: #99823D;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 20px 120px;
+
+        @include sm {
+            padding: 20px 75px;
+        }
+    }
 }
 
 .service-item {

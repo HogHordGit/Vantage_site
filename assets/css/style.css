@@ -951,6 +951,25 @@ body {
 .services__content {
   display: grid;
 }
+.services__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  width: 100%;
+  margin-top: 50px;
+}
+.services__link {
+  padding: 20px 120px;
+
+  text-decoration: none;
+
+  color: #ffffff;
+  background-color: #99823d;
+}
 
 .service-item {
   display: -webkit-box;
@@ -1419,6 +1438,9 @@ body {
   .about-us__title {
     text-align: center;
   }
+  .about-us__par {
+    text-align: center;
+  }
   .about-us__body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1588,6 +1610,9 @@ body {
   .services__content {
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6";
     grid-template-columns: 1fr;
+  }
+  .services__link {
+    padding: 20px 75px;
   }
   .service-item {
     padding: 30px 0;

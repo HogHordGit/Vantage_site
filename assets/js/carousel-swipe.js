@@ -24,8 +24,8 @@ class SwipeCarousel extends Carousel {
             this.endPosX = e.changedTouches[0].pageX;
         }
     
-        if (this.startPosX - this.endPosX < -100) this.prev();
-        if (this.startPosX - this.endPosX > 100) this.next();
+        if (this.startPosX - this.endPosX < -50) this.prev();
+        if (this.startPosX - this.endPosX > 50) this.next();
     }
 }
 

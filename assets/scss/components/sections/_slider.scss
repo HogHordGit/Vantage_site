@@ -2,7 +2,7 @@
 @use "../../mixins" as *;
 
 .slider {
-  padding: 40px 0 0px 0;
+  padding: 40px 0 30px 0;
 
   background-color: #f4f4f4;
 
@@ -16,20 +16,6 @@
 
     @include md {
       padding: 0;
-    }
-  }
-
-  &__title {
-    margin-bottom: 25px;
-
-    text-align: center;
-
-    font-family: "Teko", sans-serif;
-    font-size: 55px;
-    font-weight: 400;
-
-    @include sm {
-      font-size: 39px;
     }
   }
 }

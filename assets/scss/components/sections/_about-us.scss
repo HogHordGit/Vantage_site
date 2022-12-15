@@ -135,6 +135,8 @@
 
 .statistic {
     display: grid;
+    background-color: #f4f4f4;
+    padding: 30px 0;
 
     @include lg-min {grid-template-areas: "a1 a1 a2 a3 a4 a5 a6 a7 a8 a9";}
 
@@ -189,4 +191,4 @@
     .statistic__item:nth-of-type(#{$i}) {
       grid-area: a#{$i};
     }
-  }
+}

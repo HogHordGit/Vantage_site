@@ -171,6 +171,7 @@ template {
 .services__container,
 .projects__container,
 .about-us__container,
+.statistic__container,
 .slider__container,
 .menu__container,
 .header__container {
@@ -786,10 +787,10 @@ body {
   padding: 0 68px 0 34px;
 }
 
-.statistic {
+.statistic__container {
   display: grid;
 
-  padding: 30px 0;
+  padding: 30px 20px;
 
   background-color: #f4f4f4;
 }
@@ -1390,7 +1391,7 @@ body {
 }
 
 @media (min-width: 992px) {
-  .statistic {
+  .statistic__container {
     grid-template-areas: "a1 a2 a3 a4 a5 a6 a7 a8 a9";
   }
   .services__content {
@@ -1471,7 +1472,7 @@ body {
   .news__item {
     padding-left: 0;
   }
-  .statistic {
+  .statistic__container {
     gap: 20px;
     grid-template-areas: "a1 a2 a3" "a5 a4 a7" "a9 a9 a9";
     grid-template-columns: repeat(3, 1fr);

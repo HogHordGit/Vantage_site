@@ -416,6 +416,9 @@ body {
 .menu__link {
   padding: 6px;
 
+  -webkit-transition: color 0.2s ease-in;
+       -o-transition: color 0.2s ease-in;
+          transition: color 0.2s ease-in;
   text-decoration: none;
   letter-spacing: 0.25em;
 
@@ -423,6 +426,9 @@ body {
 
   font-size: 0.68rem;
   line-height: 3.09em;
+}
+.menu__link:hover {
+  color: #cecece;
 }
 .menu__architecture {
   display: -webkit-box;
@@ -506,6 +512,9 @@ body {
   margin-top: 15px;
   padding: 25px 70px;
 
+  -webkit-transition: background-color 0.3s ease-in;
+       -o-transition: background-color 0.3s ease-in;
+          transition: background-color 0.3s ease-in;
   text-decoration: none;
 
   color: #ffffff;
@@ -538,6 +547,9 @@ body {
 .soc-net__link {
   padding: 6px;
 
+  -webkit-transition: color 0.2s ease-in;
+       -o-transition: color 0.2s ease-in;
+          transition: color 0.2s ease-in;
   text-decoration: none;
   letter-spacing: 0.25em;
 
@@ -545,6 +557,9 @@ body {
 
   font-size: 0.68rem;
   line-height: 3.09em;
+}
+.soc-net__link:hover {
+  color: #99823d;
 }
 
 .slider {
@@ -967,10 +982,17 @@ body {
 .services__link {
   padding: 20px 120px;
 
+  -webkit-transition: background-color 0.3s ease-in;
+       -o-transition: background-color 0.3s ease-in;
+          transition: background-color 0.3s ease-in;
   text-decoration: none;
 
   color: #ffffff;
   background-color: #99823d;
+}
+.services__link:hover {
+  color: #3a3a3a;
+  background-color: #bca561;
 }
 
 .service-item {
@@ -1187,6 +1209,9 @@ body {
 .under-sub__link {
   padding: 6px;
 
+  -webkit-transition: color 0.2s ease-in;
+       -o-transition: color 0.2s ease-in;
+          transition: color 0.2s ease-in;
   text-decoration: none;
   letter-spacing: 0.25em;
 
@@ -1194,6 +1219,9 @@ body {
 
   font-size: 0.68rem;
   line-height: 3.09em;
+}
+.under-sub__link:hover {
+  color: #cecece;
 }
 .under-sub__copy {
   color: #ffffff;
@@ -1219,6 +1247,9 @@ body {
 .subscribe__button {
   padding: 18px 45px;
 
+  -webkit-transition: background-color 0.3s ease-in;
+       -o-transition: background-color 0.3s ease-in;
+          transition: background-color 0.3s ease-in;
   text-decoration: none;
   letter-spacing: 2.7625px;
 
@@ -1228,6 +1259,9 @@ body {
   font-size: 12px;
   font-weight: 700;
   line-height: 34px;
+}
+.subscribe__button:hover {
+  background-color: #2d2d2d;
 }
 
 .f-menu {
@@ -1267,6 +1301,9 @@ body {
 .f-menu__link {
   padding: 6px;
 
+  -webkit-transition: color 0.2s ease-in;
+       -o-transition: color 0.2s ease-in;
+          transition: color 0.2s ease-in;
   text-decoration: none;
   letter-spacing: 0.25em;
 
@@ -1274,6 +1311,9 @@ body {
 
   font-size: 0.68rem;
   line-height: 3.09em;
+}
+.f-menu__link:hover {
+  color: #cecece;
 }
 .f-menu__img {
   width: 130px;
@@ -1349,9 +1389,15 @@ body {
 .-light {
   background-color: #99823d;
 }
+.-light:hover {
+  background-color: #7b6628;
+}
 
 .-black {
   background-color: #000000;
+}
+.-black:hover {
+  background-color: #292929;
 }
 
 .-col-gray {

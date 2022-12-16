@@ -156,6 +156,12 @@
 
     font-size: 0.68rem;
     line-height: 3.09em;
+
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      color: #cecece;
+    }
   }
   &__architecture {
     display: flex;

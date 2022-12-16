@@ -45,9 +45,17 @@
 }
 .-light {
   background-color: #99823d;
+
+  &:hover {
+    background-color: #7b6628;
+  }
 }
 .-black {
   background-color: #000000;
+
+  &:hover {
+    background-color: #292929;
+  }
 }
 .-dis {
   @include lg {

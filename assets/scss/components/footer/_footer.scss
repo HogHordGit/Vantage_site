@@ -67,6 +67,12 @@
 
     font-size: 0.68rem;
     line-height: 3.09em;
+
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      color: #cecece;
+    }
   }
   &__copy {
     color: #ffffff;
@@ -120,11 +126,17 @@
     font-weight: 700;
     line-height: 34px;
 
+    transition: background-color 0.3s ease-in;
+
     @include md {
       padding: 18px 30px;
     }
     @include sm {
       padding: 10px 30px;
+    }
+
+    &:hover {
+      background-color: #2d2d2d;
     }
   }
 }

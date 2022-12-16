@@ -1223,6 +1223,17 @@ body {
 .under-sub__link:hover {
   color: #cecece;
 }
+.under-sub__link-copy {
+  -webkit-transition: color 0.2s ease-in;
+       -o-transition: color 0.2s ease-in;
+          transition: color 0.2s ease-in;
+  text-decoration: none;
+
+  color: #ffffff;
+}
+.under-sub__link-copy:hover {
+  color: #cecece;
+}
 .under-sub__copy {
   color: #ffffff;
 }

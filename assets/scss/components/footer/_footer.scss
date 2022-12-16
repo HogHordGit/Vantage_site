@@ -74,6 +74,16 @@
       color: #cecece;
     }
   }
+  &__link-copy {
+    text-decoration: none;
+    color: #ffffff;
+
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      color: #cecece;
+    }
+  }
   &__copy {
     color: #ffffff;
 

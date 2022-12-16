@@ -7,11 +7,21 @@
     margin-top: 50px;
     padding-bottom: 200px;
 
+    @include lg {
+        padding-bottom: 170px;
+    }
+    
     &__container {
         @extend %container;
     }
     &__body {
         display: flex;
+        height: 350px;
+
+        @include lg {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
 
@@ -22,58 +32,57 @@
     justify-content: center;
     padding-left: 10%;
     
+    @include lg {
+        flex: 1 1 100%;
+        padding-left: 0;
+    }
+
     & > *:not(:last-child) {
         margin-bottom: 25px;
     }
     &__holder {
         display: flex;
+
+        @include sm {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
     }
     &__title {
+        text-align: center;
         width: 125px;
     }
     &__text {
         margin-left: 20px;
+
+        @include sm {
+            text-align: center;
+            margin: 0;
+        }
     }
     &__icons {
         display: flex;
         gap: 20px;
         font-size: 35px;
         margin-top: 15px;
+
+        @include lg {
+            justify-content: center;
+        }
     }
 }
 
-.form {
+.map-block {
     flex: 1 1 50%;
+    display: flex;
 
-    &__title {
-        font-size: 20px;
+    @include lg {
+        display: none;
     }
-    &__label {
-        display: block;
-        font-weight: 400;
-        font-size: 19px;
-    }
-    &__input {
-        width: 100%;
-        height: 42px;
-        border-radius: 7px;
-        padding: 0 0 0 20px;
-    }
-    &__textarea {
-        width: 100%;
-        resize: vertical;
-        min-height: 200px;
-        border-radius: 7px;
-        padding: 0 0 0 10px;
-    }
-    &__block {
-        max-width: 90%;
-        height: 100%;
+    
+    &__map {
         margin: 0 auto;
-        padding: 20px;
-
-        & > *:not(:last-child) {
-            margin-bottom: 15px;
-        }
+        width: 90%;
     }
 }

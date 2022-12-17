@@ -19,10 +19,10 @@
     }
     &__title {
         margin-bottom: 50px;
-        font-family: 'Teko';
+        font-family: 'Oswald', sans-serif;
         font-style: normal;
         font-weight: 700;
-        @include adaptive_font(50, 32);
+        @include adaptive_font(50, 30);
         @include adaptive_line-height(53, 50);
 
         text-align: center;
@@ -67,7 +67,7 @@
         background-color: #99823D;
         color: #ffffff;
         text-decoration: none;
-        padding: 20px 120px;
+        padding: 20px 80px;
 
         transition: background-color 0.3s ease-in;
 
@@ -86,7 +86,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 32px 65px 32px 32px;
+    padding: 32px;
+    height: 100%;
 
     @include md {
         padding: 32px 15px;
@@ -98,6 +99,8 @@
 
     &__header {
         display: flex;
+        width: 100%;
+        justify-content: center;
         margin-bottom: 15px;
     }
     &__image {
@@ -114,11 +117,11 @@
         color: #99823D;
     }
     &__title {
-        font-family: 'Teko';
+        font-family: 'Oswald', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 26px;
-        line-height: 26px;
+        line-height: 30px;
 
         text-transform: capitalize;
 

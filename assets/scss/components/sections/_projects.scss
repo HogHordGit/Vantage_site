@@ -20,6 +20,19 @@
         height: 11px;
         background-color: #222222;
     }
+    &__category {
+        font-weight: 400;
+        font-size: 0.611rem;
+        line-height: 1.5454em;
+
+        letter-spacing: 0.2509em;
+        text-transform: uppercase;
+
+        color: #99823D;
+        margin-bottom: -10px;
+
+        text-align: center;
+    }
     &__title {
         margin-bottom: 25px;
     

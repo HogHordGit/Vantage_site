@@ -50,8 +50,12 @@
         }
     }
     &__title {
-        text-align: center;
+        text-align: end;
         width: 125px;
+
+        @include sm {
+            text-align: center;
+        }
     }
     &__text {
         margin-left: 20px;

@@ -847,12 +847,13 @@ body {
   padding: 0 68px 0 34px;
 }
 
+.statistic {
+  background-color: #f4f4f4;
+}
 .statistic__container {
   display: grid;
 
   padding: 30px 20px;
-
-  background-color: #f4f4f4;
 }
 .statistic__item {
   display: -webkit-box;
@@ -958,6 +959,19 @@ body {
 
   background-color: #222222;
 }
+.projects__category {
+  margin-bottom: -10px;
+
+  text-align: center;
+  letter-spacing: 0.2509em;
+  text-transform: uppercase;
+
+  color: #99823d;
+
+  font-size: 0.611rem;
+  font-weight: 400;
+  line-height: 1.5454em;
+}
 .projects__title {
   margin-bottom: 25px;
 
@@ -1005,7 +1019,7 @@ body {
 
   color: #141414;
 
-  font-family: "Teko";
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-style: normal;
   line-height: 106%;
@@ -1025,7 +1039,7 @@ body {
   margin-top: 50px;
 }
 .services__link {
-  padding: 20px 120px;
+  padding: 20px 80px;
 
   -webkit-transition: background-color 0.3s ease-in;
        -o-transition: background-color 0.3s ease-in;
@@ -1052,13 +1066,18 @@ body {
   -ms-flex-direction: column;
       flex-direction: column;
 
-  padding: 32px 65px 32px 32px;
+  height: 100%;
+  padding: 32px;
 }
 .service-item__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
+  width: 100%;
   margin-bottom: 15px;
 }
 .service-item__image {
@@ -1080,11 +1099,11 @@ body {
 
   color: #141414;
 
-  font-family: "Teko";
+  font-family: "Oswald", sans-serif;
   font-size: 26px;
   font-weight: 400;
   font-style: normal;
-  line-height: 26px;
+  line-height: 30px;
 }
 .service-item__text {
   text-align: center;
@@ -1163,7 +1182,7 @@ body {
 .contact-block__title {
   width: 125px;
 
-  text-align: center;
+  text-align: end;
 }
 .contact-block__text {
   margin-left: 20px;
@@ -1301,7 +1320,7 @@ body {
   padding-left: 50px;
 }
 .subscribe__button {
-  padding: 18px 45px;
+  padding: 18px 35px;
 
   -webkit-transition: background-color 0.3s ease-in;
        -o-transition: background-color 0.3s ease-in;
@@ -1450,14 +1469,14 @@ body {
   background-color: #99823d;
 }
 .-light:hover {
-  background-color: #7b6628;
+  background-color: #6c5a22;
 }
 
 .-black {
   background-color: #000000;
 }
 .-black:hover {
-  background-color: #292929;
+  background-color: #343434;
 }
 
 .-col-gray {
@@ -1484,7 +1503,7 @@ body {
     font-size: calc(39px + 21 * (100vw / 1440));
   }
   .services__title {
-    font-size: calc(32px + 18 * (100vw / 1440));
+    font-size: calc(30px + 20 * (100vw / 1440));
   }
 }
 
@@ -1746,7 +1765,7 @@ body {
     font-size: calc(39px + 21 * ((100vw - 320px) / 1440));
   }
   .services__title {
-    font-size: calc(32px + 18 * ((100vw - 320px) / 1440));
+    font-size: calc(30px + 20 * ((100vw - 320px) / 1440));
   }
 }
 
@@ -1861,6 +1880,9 @@ body {
         flex-direction: column;
 
     gap: 10px;
+  }
+  .contact-block__title {
+    text-align: center;
   }
   .contact-block__text {
     margin: 0;

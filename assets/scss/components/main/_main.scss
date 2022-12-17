@@ -1,0 +1,45 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.main {
+    position: relative;
+
+    &__angle-up {
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        z-index: 999;
+        opacity: 0.4;
+
+        width: 65px;
+        height: 65px;
+
+        border-radius: 100%;
+
+        font-size: 30px;
+        background-color: #99823D;
+        transition: opacity 0.2s ease-in;
+
+        &:hover {
+            opacity: 1;
+            background-color: #bca049;
+        }
+
+        @include sm {
+            width: 60px;
+            height: 60px;
+            right: 20px;
+            bottom: 20px;
+        }
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+        color: #ffffff;
+        text-decoration: none;
+    }
+}

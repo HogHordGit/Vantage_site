@@ -1,7 +1,7 @@
 "use strict";
 
 // Скрипт для плавной прокрутки
-const anchors = document.querySelectorAll('.menu__link');
+const anchors = document.querySelectorAll('.slow-scroll');
 
 for (let anchor of anchors) {
     anchor.addEventListener("click", (event) => {
@@ -45,6 +45,23 @@ $(document).ready(function(){
 		$(this).toggleClass('menu__btn--active');
 		$('.menu__list').slideToggle(300);
 	});
+});
+
+// Скрипты для стрелки вверх
+$(document).ready(function(){
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 500) {
+            $('.up-arrow').fadeIn();
+        } else {
+            $('.up-arrow').fadeOut();
+        }
+    });
+    $('.up-arrow').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
 });
 
 

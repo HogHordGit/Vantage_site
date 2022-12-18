@@ -57,7 +57,7 @@
   &__title {
     width: 125px;
 
-    text-align: end;
+    text-align: start;
 
     @include sm {
       text-align: center;

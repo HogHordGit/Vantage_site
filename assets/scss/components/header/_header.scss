@@ -52,6 +52,7 @@
     background-color: #ffffff;
   }
   &__right-space {
+    z-index: 1;
     position: relative;
 
     display: flex;

@@ -54,7 +54,7 @@
                             </p>
                             <div class="desc-block__buttons">
                                 <a href="#projects" class="desc-block__btn -light slow-scroll">ДОСЛІДИТИ</a>
-                                <a href="#" class="desc-block__btn -black">LET'S CHAT</a>
+                                <a href="#popup_order_table" class="desc-block__btn -black">LET'S CHAT</a>
                             </div>
                         </div>
                     </div>
@@ -501,6 +501,26 @@
                 </div>
             </div>
         </footer>
+    </div>
+
+    <div id="popup_order_table" class="popup">
+        <div class="popup_body">
+            <a href="#fixed" class="popup_area"></a>
+            <div class="popup_content">
+                <a href="#fixed" class="popup_close">X</a>
+                <div class="popup_title">Заповніть форму <br>і ми вам передзвонимо</div>
+                <div class="popup_text">
+                    <form action="#" id="formPhone" autocomplete="off">
+                        <input class="form_text" type="text" name="m_name" placeholder="Як Вас звати?" required />
+                        <input class="form_text art-stranger" type="number" name="m_phone" placeholder="Ваш номер телефону?" id="phone" required />
+    
+                        <div class="form_button_container">
+                            <button type="button" class="form_btn">НАДІСЛАТИ</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="libs/jquery/dist/jquery.min.js"></script>

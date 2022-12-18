@@ -2,201 +2,227 @@
 @use "../../mixins" as *;
 
 .about-us {
-    padding-top: 135px;
+  padding-top: 135px;
 
-    @include lg {padding-top: 40px;}
-    @include md {padding-top: 30px;}
-    @include sm {padding-top: 25px;}
+  @include lg {
+    padding-top: 40px;
+  }
+  @include md {
+    padding-top: 30px;
+  }
+  @include sm {
+    padding-top: 25px;
+  }
 
-    &__container {
-        
-        @extend %container;
+  &__container {
+    @extend %container;
+  }
+  &__content {
+    flex: 1 1 70%;
+
+    padding: 0 68px;
+
+    @include lg {
+      padding: 30px;
     }
-    &__content {
-        padding: 0 68px;
-        flex: 1 1 70%;
-
-        @include lg {padding: 30px;}
-        @include sm {padding: 0;}
+    @include sm {
+      padding: 0;
     }
-    &__category {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 0.6875rem;
-        line-height: 1.54em;
-        letter-spacing: 0.15em;
-        color: #99823D;
+  }
+  &__category {
+    letter-spacing: 0.15em;
 
-        @include md {text-align: center;}
+    color: #99823d;
+
+    font-size: 0.6875rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.54em;
+
+    @include md {
+      text-align: center;
     }
-    &__title {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1em;
-        letter-spacing: 0.05em;
+  }
+  &__title {
+    margin-bottom: 28px;
 
-        text-transform: capitalize;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
 
-        color: #141414;
-        margin-bottom: 28px;
+    color: #141414;
 
-        @include adaptive_font(48, 30);
-        @include md {text-align: center;}
+    font-family: "Oswald";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1em;
+
+    @include adaptive_font(48, 30);
+    @include md {
+      text-align: center;
     }
-    &__text > *:not(:last-child) {
-        margin-bottom: 16px;
+  }
+  &__text > *:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  &__par {
+    color: #141414;
+
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.444em;
+
+    @include adaptive_font(17, 16);
+    @include md {
+      text-align: center;
     }
-    &__par {
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.444em;
+  }
+  &__body {
+    display: flex;
 
-        @include adaptive_font(17, 16);
+    margin-bottom: 65px;
 
-        color: #141414;
-
-        @include md {
-            text-align: center;
-        }
+    @include md {
+      flex-direction: column;
     }
-    &__body {
-        margin-bottom: 65px;
-        display: flex;
-
-        @include md {flex-direction: column;}
-        @include lg-md {margin-bottom: 30px;}
+    @include lg-md {
+      margin-bottom: 30px;
     }
+  }
 }
 
 .news {
-    display: flex;
+  display: flex;
+  flex: 1 1 30%;
+  flex-direction: column;
+  justify-content: space-around;
 
+  @include md {
+    align-items: baseline;
+    flex-direction: row;
+
+    gap: 10px;
+  }
+  @include sm {
+    & > *:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  @include sm {
+    align-items: center;
     flex-direction: column;
-    justify-content: space-around;
 
-    flex: 1 1 30%;
+    width: 100%;
+    margin: 40px 0 0 0;
+  }
+
+  &__category {
+    margin-bottom: 11px;
+
+    letter-spacing: 0.2509em;
+    text-transform: uppercase;
+
+    color: #99823d;
+
+    font-size: 0.611rem;
+    font-weight: 400;
+    line-height: 1.5454em;
 
     @include md {
-        flex-direction: row;
-        gap: 10px;
-        align-items: baseline;
+      text-align: center;
     }
+  }
+  &__text {
+    color: #141414;
+
+    font-family: "Oswald";
+    font-size: 1.444rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1em;
 
     @include sm {
-        & > *:not(:last-child) {
-            margin-bottom: 20px;
-        }
+      text-align: center;
     }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    @include sm {
-        margin: 40px 0 0 0;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
+    height: 50px;
+    padding: 0 68px 0 34px;
+
+    @include lg {
+      padding-left: 0;
     }
-
-    &__category {
-        font-weight: 400;
-        font-size: 0.611rem;
-        line-height: 1.5454em;
-
-        letter-spacing: 0.2509em;
-        text-transform: uppercase;
-
-        color: #99823D;
-        margin-bottom: 11px;
-
-        @include md {text-align: center;}
+    @include md {
+      padding-right: 0;
     }
-    &__text {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1.444rem;
-        line-height: 1em;
-
-        color: #141414;
-
-        @include sm {
-            text-align: center;
-        }
-    }
-    &__item {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        padding: 0 68px 0 34px;
-        height: 50px;
-
-        @include lg {padding-left: 0;}
-        @include md {padding-right: 0;}
-    }
+  }
 }
 
 .statistic {
-    background-color: #f4f4f4;
-    
-    &__container {
-        display: grid;
-        padding: 30px 20px;
+  background-color: #f4f4f4;
 
-        @include lg-min {
-            grid-template-areas: "a1 a2 a3 a4 a5 a6 a7 a8 a9";
-        }
-    
-        @include lg {
-            gap: 20px;
-            grid-template-areas: "a1 a2 a3"
-                                 "a5 a4 a7"
-                                 "a9 a9 a9";
-            
-            grid-template-columns: repeat(3, 1fr);
-        }
+  &__container {
+    display: grid;
 
-        @extend %container;
+    padding: 30px 20px;
+
+    @extend %container;
+    @include lg-min {
+      grid-template-areas: "a1 a2 a3 a4 a5 a6 a7 a8 a9";
     }
-    &__item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    @include lg {
+      gap: 20px;
+      grid-template-areas: "a1 a2 a3"
+      "a5 a4 a7"
+      "a9 a9 a9";
+      grid-template-columns: repeat(3, 1fr);
     }
-    &__block {
-        width: 9px;
-        height: 9px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__block {
+    width: 9px;
+    height: 9px;
 
-        background-color: #99823D;
+    background-color: #99823d;
+  }
+  &__number {
+    text-align: center;
+
+    color: #141414;
+
+    font-family: "Oswald";
+    font-size: 59px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 59px;
+
+    @include sm {
+      font-size: 50px;
     }
-    &__number {
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 59px;
-        line-height: 59px;
+  }
+  &__text {
+    text-align: center;
+    letter-spacing: 2.975px;
+    text-transform: uppercase;
 
-        text-align: center;
+    color: #99823d;
 
-        color: #141414;
-
-        @include sm {font-size: 50px;}
-    }
-    &__text {
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 18px;
-
-        text-align: center;
-        letter-spacing: 2.975px;
-        text-transform: uppercase;
-
-        color: #99823D;
-    }
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
 }
 
 @for $i from 1 through 9 {
-    .statistic__item:nth-of-type(#{$i}) {
-      grid-area: a#{$i};
-    }
+  .statistic__item:nth-of-type(#{$i}) {
+    grid-area: a#{$i};
+  }
 }

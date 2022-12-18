@@ -3,6 +3,7 @@
 
 .f-menu {
   position: absolute;
+  z-index: 0;
   bottom: 240px;
 
   display: flex;
@@ -15,22 +16,21 @@
   padding-top: 40px;
 
   background-color: #3d3d3d;
-  z-index: 0;
-
-  @media (max-width: 1440px) {
-    margin-left: 1.75%;
-    width: 96.5%;
-  }
 
   @include md {
     flex-direction: column;
     justify-content: center;
+
     width: 100%;
     margin: 0;
   }
-
   @include sm {
     height: 80px;
+  }
+
+  @media (max-width: 1440px) {
+    width: 96.5%;
+    margin-left: 1.75%;
   }
 
   &__list {
@@ -52,6 +52,7 @@
   &__link {
     padding: 6px;
 
+    transition: color 0.2s ease-in;
     text-decoration: none;
     letter-spacing: 0.25em;
 
@@ -59,8 +60,6 @@
 
     font-size: 0.68rem;
     line-height: 3.09em;
-
-    transition: color 0.2s ease-in;
 
     &:hover {
       color: #cecece;

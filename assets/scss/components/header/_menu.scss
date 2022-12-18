@@ -130,11 +130,6 @@
     list-style: none;
 
     gap: 30px;
-
-    @media (max-width: 1050px) {
-      gap: 10px;
-    }
-
     @include lg {
       position: absolute;
       top: 50px;
@@ -142,7 +137,10 @@
 
       display: none;
     }
-  
+
+    @media (max-width: 1050px) {
+      gap: 10px;
+    }
   }
   &__item {
     text-align: end;
@@ -154,6 +152,7 @@
   &__link {
     padding: 6px;
 
+    transition: color 0.2s ease-in;
     text-decoration: none;
     letter-spacing: 0.25em;
 
@@ -161,12 +160,9 @@
 
     line-height: 3.09em;
 
-    transition: color 0.2s ease-in;
-
     @include lg-min {
       font-size: 0.68rem;
     }
-
     @include sm {
       font-size: 12px;
     }

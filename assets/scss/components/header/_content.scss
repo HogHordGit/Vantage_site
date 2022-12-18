@@ -52,14 +52,13 @@
     text-transform: capitalize;
 
     font-family: "Oswald", sans-serif;
-    @include adaptive_font(60, 45);
     font-weight: 400;
     line-height: 60px;
 
+    @include adaptive_font(60, 45);
     @include lg {
       text-align: center;
     }
-
     @include sm {
       margin: 18px 0 10px 0;
 
@@ -69,9 +68,10 @@
   &__desc {
     color: #141414;
 
-    @include adaptive_font(17, 15);
     font-weight: 400;
     line-height: 26px;
+
+    @include adaptive_font(17, 15);
   }
   &__buttons {
     display: flex;
@@ -87,12 +87,12 @@
     margin-top: 15px;
     padding: 25px 70px;
 
-    @include adaptive_font(16, 14);
-    text-decoration: none;
     transition: background-color 0.3s ease-in;
+    text-decoration: none;
 
     color: #ffffff;
 
+    @include adaptive_font(16, 14);
     @include sm {
       padding: 20px 60px;
     }

@@ -1,5 +1,4 @@
 @use "../presets" as *;
-
 $maxWidth: 1440;
 
 @mixin adaptive_font ($pcSize, $mobSize) {

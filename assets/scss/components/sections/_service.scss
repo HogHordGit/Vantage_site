@@ -2,145 +2,150 @@
 @use "../../mixins" as *;
 
 .services {
-    margin-top: 30px;
+  margin-top: 30px;
 
-    &__container {
-        @extend %container;
+  &__container {
+    @extend %container;
+  }
+  &__category {
+    text-align: center;
+    letter-spacing: 2.7625px;
+
+    color: #99823d;
+
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 17px;
+  }
+  &__title {
+    margin-bottom: 50px;
+
+    text-align: center;
+    text-transform: capitalize;
+
+    color: #141414;
+
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+    @include adaptive_font(50, 30);
+    @include adaptive_line-height(53, 50);
+  }
+  &__content {
+    display: grid;
+
+    @include lg-min {
+      grid-template-areas: "a1 a2 a3"
+      "a4 a5 a6";
+      grid-template-columns: repeat(3, 1fr);
     }
-    &__category {
-        font-weight: 400;
-        font-size: 11px;
-        line-height: 17px;
-
-        text-align: center;
-        letter-spacing: 2.7625px;
-
-        color: #99823D;
+    @include lg {
+      grid-template-areas: "a1 a2"
+      "a3 a4"
+      "a5 a6";
+      grid-template-columns: repeat(2, 1fr);
     }
-    &__title {
-        margin-bottom: 50px;
-        font-family: 'Oswald', sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        @include adaptive_font(50, 30);
-        @include adaptive_line-height(53, 50);
-
-        text-align: center;
-        text-transform: capitalize;
-
-        color: #141414;
+    @include sm {
+      grid-template-areas: "a1"
+      "a2"
+      "a3"
+      "a4"
+      "a5"
+      "a6";
+      grid-template-columns: 1fr;
     }
-    &__content {
-        display: grid;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
 
-        @include lg-min {
-            grid-template-areas: "a1 a2 a3"
-                                 "a4 a5 a6";
-            
-            grid-template-columns: repeat(3, 1fr);
-        }
-        @include lg {
-            grid-template-areas: "a1 a2"
-                                 "a3 a4"
-                                 "a5 a6";
-            
-            grid-template-columns: repeat(2, 1fr);
-        }
-        @include sm {
-            grid-template-areas: "a1"
-                                 "a2"
-                                 "a3"
-                                 "a4"
-                                 "a5"
-                                 "a6";
-            
-            grid-template-columns: 1fr;
-        }
+    width: 100%;
+    margin-top: 50px;
+
+    text-align: center;
+  }
+  &__link {
+    padding: 20px 80px;
+
+    transition: background-color 0.3s ease-in;
+    text-decoration: none;
+
+    color: #ffffff;
+    background-color: #99823d;
+
+    @include sm {
+      padding: 20px 75px;
     }
-    &__button {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin-top: 50px;
 
-        text-align: center;
+    &:hover {
+      color: #3a3a3a;
+      background-color: #bca561;
     }
-    &__link {
-        background-color: #99823D;
-        color: #ffffff;
-        text-decoration: none;
-        padding: 20px 80px;
-
-        transition: background-color 0.3s ease-in;
-
-        @include sm {
-            padding: 20px 75px;
-        }
-
-        &:hover {
-            background-color: #bca561;
-            color: #3a3a3a;
-        }
-    }
+  }
 }
 
 .service-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100%;
+  padding: 32px;
+
+  @include md {
+    padding: 32px 15px;
+  }
+  @include sm {
+    padding: 30px 0;
+  }
+
+  &__header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 32px;
-    height: 100%;
+    justify-content: center;
 
-    @include md {
-        padding: 32px 15px;
-    }
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  &__image {
+    margin-right: 15px;
+  }
+  &__date {
+    margin-bottom: 8px;
 
-    @include sm {
-        padding: 30px 0;
-    }
+    letter-spacing: 2.7625px;
 
-    &__header {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        margin-bottom: 15px;
-    }
-    &__image {
-        margin-right: 15px;
-    }
-    &__date {
-        margin-bottom: 8px;
-        font-weight: 400;
-        font-size: 11px;
-        @include adaptive_line-height(17, 11);
+    color: #99823d;
 
-        letter-spacing: 2.7625px;
+    font-size: 11px;
+    font-weight: 400;
 
-        color: #99823D;
-    }
-    &__title {
-        font-family: 'Oswald', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 26px;
-        line-height: 30px;
+    @include adaptive_line-height(17, 11);
+  }
+  &__title {
+    text-transform: capitalize;
 
-        text-transform: capitalize;
+    color: #141414;
 
-        color: #141414;
-    }
-    &__text {
-        font-weight: 400;
-        font-size: 17px;
-        line-height: 26px;
-        text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 30px;
+  }
+  &__text {
+    text-align: center;
 
-        color: #141414;
-    }
+    color: #141414;
+
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 26px;
+  }
 }
 
 @for $i from 1 through 6 {
-    .service-item:nth-of-type(#{$i}) {
-      grid-area: a#{$i};
-    }
+  .service-item:nth-of-type(#{$i}) {
+    grid-area: a#{$i};
+  }
 }

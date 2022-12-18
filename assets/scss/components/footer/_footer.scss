@@ -60,6 +60,7 @@
   &__link {
     padding: 6px;
 
+    transition: color 0.2s ease-in;
     text-decoration: none;
     letter-spacing: 0.25em;
 
@@ -68,17 +69,15 @@
     font-size: 0.68rem;
     line-height: 3.09em;
 
-    transition: color 0.2s ease-in;
-
     &:hover {
       color: #cecece;
     }
   }
   &__link-copy {
-    text-decoration: none;
-    color: #ffffff;
-
     transition: color 0.2s ease-in;
+    text-decoration: none;
+
+    color: #ffffff;
 
     &:hover {
       color: #cecece;
@@ -126,6 +125,7 @@
   &__button {
     padding: 18px 35px;
 
+    transition: background-color 0.3s ease-in;
     text-decoration: none;
     letter-spacing: 2.7625px;
 
@@ -135,8 +135,6 @@
     font-size: 12px;
     font-weight: 700;
     line-height: 34px;
-
-    transition: background-color 0.3s ease-in;
 
     @include md {
       padding: 18px 30px;

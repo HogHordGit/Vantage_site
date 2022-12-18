@@ -37,9 +37,10 @@
         margin-bottom: 25px;
     
         text-align: center;
+        text-transform: capitalize;
     
-        font-family: "Teko", sans-serif;
-        @include adaptive_font(60, 39);
+        font-family: "Oswald", sans-serif;
+        @include adaptive_font(55, 39);
         font-weight: 400;
     }
     &__body {

@@ -4,9 +4,9 @@
 .about-us {
     padding-top: 135px;
 
-    @include lg {padding-top: 80px;}
-    @include md {padding-top: 50px;}
-    @include sm {padding-top: 30px;}
+    @include lg {padding-top: 40px;}
+    @include md {padding-top: 30px;}
+    @include sm {padding-top: 25px;}
 
     &__container {
         
@@ -30,7 +30,7 @@
         @include md {text-align: center;}
     }
     &__title {
-        font-family: 'Teko';
+        font-family: 'Oswald';
         font-style: normal;
         font-weight: 400;
         line-height: 1em;
@@ -41,7 +41,7 @@
         color: #141414;
         margin-bottom: 28px;
 
-        @include adaptive_font(53, 33);
+        @include adaptive_font(48, 30);
         @include md {text-align: center;}
     }
     &__text > *:not(:last-child) {
@@ -110,13 +110,11 @@
         @include md {text-align: center;}
     }
     &__text {
-        font-family: 'Teko';
+        font-family: 'Oswald';
         font-style: normal;
         font-weight: 400;
         font-size: 1.444rem;
         line-height: 1em;
-
-        text-transform: capitalize;
 
         color: #141414;
 
@@ -172,7 +170,7 @@
         background-color: #99823D;
     }
     &__number {
-        font-family: 'Teko';
+        font-family: 'Oswald';
         font-style: normal;
         font-weight: 700;
         font-size: 59px;

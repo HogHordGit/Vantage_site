@@ -74,8 +74,9 @@
     color: #ffffff;
     background-color: #99823d;
 
-    @include sm {
-      padding: 20px 75px;
+    @media (max-width: 380px) {
+      padding: 20px 0;
+      width: 100%;
     }
 
     &:hover {

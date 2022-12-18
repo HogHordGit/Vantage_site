@@ -80,3 +80,8 @@
 .-col-gray {
   background-color: #f4f4f4;
 }
+.-dis-footer {
+  @media (max-width: 390px) {
+    display: none;
+  }
+}

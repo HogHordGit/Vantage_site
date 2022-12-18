@@ -505,15 +505,21 @@ body {
   display: -ms-flexbox;
   display: flex;
 
+  margin-top: 10px;
+
   gap: 15px;
 }
 .desc-block__btn {
-  margin-top: 15px;
-  padding: 25px 70px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 50%;
+      flex: 1 1 50%;
+
+  padding: 25px 0;
 
   -webkit-transition: background-color 0.3s ease-in;
        -o-transition: background-color 0.3s ease-in;
           transition: background-color 0.3s ease-in;
+  text-align: center;
   text-decoration: none;
 
   color: #ffffff;
@@ -774,7 +780,7 @@ body {
   font-family: "Oswald";
   font-weight: 400;
   font-style: normal;
-  line-height: 1em;
+  line-height: 33px;
 }
 .about-us__text > *:not(:last-child) {
   margin-bottom: 16px;
@@ -1269,7 +1275,7 @@ body {
 
   list-style: none;
 
-  gap: 30px;
+  gap: 10px;
 }
 .under-sub__link {
   padding: 6px;
@@ -1486,7 +1492,7 @@ body {
 
 @media (min-width: 767px) {
   .desc-block__title {
-    font-size: calc(45px + 15 * (100vw / 1440));
+    font-size: calc(42px + 18 * (100vw / 1440));
   }
   .desc-block__desc {
     font-size: calc(15px + 2 * (100vw / 1440));
@@ -1754,7 +1760,7 @@ body {
 
 @media (max-width: 767px) {
   .desc-block__title {
-    font-size: calc(45px + 15 * ((100vw - 320px) / 1440));
+    font-size: calc(42px + 18 * ((100vw - 320px) / 1440));
   }
   .desc-block__desc {
     font-size: calc(15px + 2 * ((100vw - 320px) / 1440));
@@ -1807,15 +1813,11 @@ body {
     line-height: 45px;
   }
   .desc-block__buttons {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-        flex-direction: column;
-
-    gap: 0;
+    margin-top: 30px;
   }
   .desc-block__btn {
-    padding: 20px 60px;
+    margin-bottom: 10px;
+    padding: 20px 0;
   }
   .soc-net {
     -webkit-box-pack: center;
@@ -1870,9 +1872,6 @@ body {
   .services__content {
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6";
     grid-template-columns: 1fr;
-  }
-  .services__link {
-    padding: 20px 75px;
   }
   .service-item {
     padding: 30px 0;
@@ -1929,5 +1928,18 @@ body {
   }
   .f-menu__img {
     margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 390px) {
+  .-dis-footer {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .services__link {
+    width: 100%;
+    padding: 20px 0;
   }
 }

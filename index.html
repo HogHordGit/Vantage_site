@@ -508,11 +508,20 @@
             <a href="#fixed" class="popup__area"></a>
             <div class="popup__content">
                 <a href="#fixed" class="popup__close">X</a>
-                <div class="popup__title">Заповніть форму <br>і ми вам передзвонимо</div>
+                <div class="popup__title">Заповніть форму <br>і ми вам зателефонуємо</div>
                 <div class="popup__text">
                     <form action="#" id="formPhone" autocomplete="off">
-                        <input class="form__text" type="text" name="m_name" placeholder="Як Вас звати?" required />
-                        <input class="form__text art-stranger" type="number" name="m_phone" placeholder="Ваш номер телефону?" id="phone" required />
+                        <input id="input-name" class="form__text" type="text" name="m_name" placeholder="Як Вас звати?" required />
+
+                        <div id="errorName" class="form__check-name">
+                            Ім'я має містити більше 2 букв
+                        </div>
+
+                        <input id="input-phone" class="form__text art-stranger" type="number" name="m_phone" placeholder="Ваш номер телефону? (380)" id="phone" required />
+
+                        <div id="errorPhone" class="form__check-name">
+                            Неправильний формат номера
+                        </div>
     
                         <div class="form__button-container">
                             <button type="button" class="form__btn">НАДІСЛАТИ</button>
@@ -524,6 +533,7 @@
     </div>
 
     <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/js/popup.js"></script>
     <script src="assets/js/scripts.js"></script>
     <script src="assets/js/index.js" type="module"></script>
 

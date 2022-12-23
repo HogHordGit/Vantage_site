@@ -8,5 +8,4 @@ const slider = new SwipeCarousel({
     isPlaying: false
 });
 
-
 slider.init();

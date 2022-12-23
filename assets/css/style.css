@@ -683,11 +683,10 @@ body {
 
   width: 100%;
   height: 50px;
-  margin: 0 0 15px 0;
+  margin-bottom: 10px;
   padding: 0 16px;
 
   -webkit-transition: all 0.3s ease-in-out;
-     -moz-transition: all 0.3s ease-in-out;
        -o-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
 
@@ -708,7 +707,6 @@ body {
   height: 50px;
 
   -webkit-transition: all 0.3s ease-in-out;
-     -moz-transition: all 0.3s ease-in-out;
        -o-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
   text-transform: uppercase;
@@ -732,6 +730,18 @@ body {
 
   width: 1px;
   height: 1px;
+}
+
+.form__check-name {
+  display: none;
+
+  margin-bottom: 10px;
+
+  text-align: center;
+
+  color: red;
+
+  font-size: 14px;
 }
 
 .main {

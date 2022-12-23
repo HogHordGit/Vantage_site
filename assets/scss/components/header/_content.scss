@@ -75,27 +75,29 @@
   }
   &__buttons {
     display: flex;
+
     margin-top: 10px;
 
     gap: 15px;
-
     @include sm {
       margin-top: 30px;
     }
   }
   &__btn {
     flex: 1 1 50%;
-    text-align: center;
-    transition: background-color 0.3s ease-in;
-    text-decoration: none;
-    @include adaptive_font(16, 14);
+
     padding: 25px 0;
+
+    transition: background-color 0.3s ease-in;
+    text-align: center;
+    text-decoration: none;
 
     color: #ffffff;
 
+    @include adaptive_font(16, 14);
     @include sm {
-      padding: 20px 0;
       margin-bottom: 10px;
+      padding: 20px 0;
     }
   }
 }

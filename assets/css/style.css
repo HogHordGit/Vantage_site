@@ -570,22 +570,6 @@ body {
   color: #99823d;
 }
 
-.fixed_model {
-  position: fixed;
-
-  width: 1px;
-  height: 1px;
-}
-
-.popup_area {
-  position: absolute;
-  right: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-}
-
 .popup {
   position: fixed;
   z-index: 8000;
@@ -606,21 +590,26 @@ body {
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.8);
 }
-
 .popup:target {
   visibility: visible;
 
   opacity: 1;
 }
-
-.popup:target .popup_content {
+.popup:target .popup__content {
   -webkit-transform: perspective(600px) translate(0px, 0%) rotate(0deg);
           transform: perspective(600px) translate(0px, 0%) rotate(0deg);
 
   opacity: 1;
 }
+.popup__area {
+  position: absolute;
+  right: 0;
+  left: 0;
 
-.popup_body {
+  width: 100%;
+  height: 100%;
+}
+.popup__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -634,8 +623,7 @@ body {
   min-height: 100%;
   padding: 30px 10px;
 }
-
-.popup_content {
+.popup__content {
   position: relative;
 
   min-width: 400px;
@@ -651,8 +639,7 @@ body {
   color: #000000;
   background-color: #ffffff;
 }
-
-.popup_title {
+.popup__title {
   margin: 20px 0 1.5em 0;
 
   text-align: center;
@@ -660,8 +647,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
-
-.popup_close {
+.popup__close {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -688,11 +674,11 @@ body {
   font-size: 20px;
   font-weight: bold;
 }
-
-.popup_close:hover {
+.popup__close:hover {
   background-color: #373737;
 }
-.form_text {
+
+.form__text {
   display: block;
 
   width: 100%;
@@ -712,14 +698,12 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
 }
-
-.form_button_container {
+.form__button-container {
   margin-top: 30px;
 
   text-align: center;
 }
-
-.form_btn {
+.form__btn {
   width: 175px;
   height: 50px;
 
@@ -737,11 +721,17 @@ body {
   font-size: 14px;
   font-weight: 400;
 }
-
-.form_btn:hover {
+.form__btn:hover {
   cursor: pointer;
 
   background: #7a6117;
+}
+
+.fixed__model {
+  position: fixed;
+
+  width: 1px;
+  height: 1px;
 }
 
 .main {
@@ -1691,7 +1681,7 @@ body {
   .desc-block__btn {
     font-size: calc(14px + 2 * (100vw / 1440));
   }
-  .popup_title {
+  .popup__title {
     font-size: calc(20px + 5 * (100vw / 1440));
   }
   .about-us__title {
@@ -1962,7 +1952,7 @@ body {
   .desc-block__btn {
     font-size: calc(14px + 2 * ((100vw - 320px) / 1440));
   }
-  .popup_title {
+  .popup__title {
     font-size: calc(20px + 5 * ((100vw - 320px) / 1440));
   }
   .about-us__title {
@@ -2132,7 +2122,7 @@ body {
 }
 
 @media (max-width: 500px) {
-  .popup_content {
+  .popup__content {
     min-width: 100%;
     padding: 30px 15px;
   }

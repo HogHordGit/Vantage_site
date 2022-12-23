@@ -1,3 +1,6 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
 .fixed_model {
     position: fixed;
     width: 1px;
@@ -54,6 +57,11 @@
     position: relative;
     transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
     transition: all 0.3s ease 0s;
+
+    @media (max-width: 500px) {
+        min-width: 100%;
+        padding: 30px 15px;
+    }
 }
 
 .popup_title {
@@ -61,7 +69,7 @@
     /* font-size: calc(27px + 23 * (100vw / 1440)); */
     font-weight: 400;
     text-align: center;
-    font-size: 25px;
+    @include adaptive_font(25, 20);
     margin: 20px 0px 1.5em 0px;
 }
 

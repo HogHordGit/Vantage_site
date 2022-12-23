@@ -64,4 +64,22 @@ $(document).ready(function(){
     });
 });
 
+// Скрипты для pop-menu
 
+const popButton = document.querySelector(".form_btn");
+const popContainer = document.querySelector(".popup_text");
+const popTitle = document.querySelector(".popup_title");
+
+let flag = true;
+
+const popHandler = (e) => {
+    const target = e.target;
+
+    if(target && target.classList.contains("form_btn") && flag == true) {
+        popContainer.remove();
+
+        popTitle.innerHTML = "Дякуємо! <br><br> Протягом 5 хвилин наш менеджер <br> зв'яжиться з вами.";
+    }
+};
+
+popButton.addEventListener("click", popHandler);

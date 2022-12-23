@@ -1116,6 +1116,18 @@ body {
   grid-area: a9;
 }
 
+.element-animation {
+  opacity: 0;
+}
+
+.element-animation.element-show {
+  -webkit-transition: all 1s;
+       -o-transition: all 1s;
+          transition: all 1s;
+
+  opacity: 1;
+}
+
 .projects {
   margin-top: 40px;
 }

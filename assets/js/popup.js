@@ -15,13 +15,6 @@ let testPhone = null;
 const popHandler = (e) => {
     const target = e.target;
 
-    if(target && target.classList.contains("form__btn") && (testName && testPhone)) {
-        popContainer.remove();
-
-        console.log(`Submitted name: ${searchNameLast} phone: ${searchPhoneLast}`);
-        popTitle.innerHTML = "Дякуємо! <br><br> Протягом 5 хвилин наш менеджер <br> зв'яжиться з вами.";
-    }
-
     setInterval(() => {
         const searchNameString = inpName.value;
         const searchPhoneString = inpPhone.value;
@@ -51,6 +44,17 @@ const popHandler = (e) => {
         searchNameLast = searchNameString;
         searchPhoneLast = searchPhoneString;
     }, 50);
+
+    setTimeout(() => {
+        console.log(testName, testPhone);
+
+        if(target && target.classList.contains("form__btn") && (testName && testPhone)) {
+            popContainer.remove();
+
+            console.log(`Submitted name: ${searchNameLast} phone: ${searchPhoneLast}`);
+            popTitle.innerHTML = "Дякуємо! <br><br> Протягом 5 хвилин наш менеджер <br> зв'яжиться з вами.";
+        }
+    }, 300);
 };
 
 popButton.addEventListener("click", popHandler);

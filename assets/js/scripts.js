@@ -1,5 +1,3 @@
-"use strict";
-
 // Скрипт для плавной прокрутки
 const anchors = document.querySelectorAll('.slow-scroll');
 

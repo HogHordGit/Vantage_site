@@ -527,8 +527,6 @@ body {
 }
 
 .soc-net {
-  z-index: 999;
-
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
